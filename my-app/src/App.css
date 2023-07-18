@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+/* 추가한 항목 */
+.Embed-container {
+  height: 500px;
+  width: 800px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
