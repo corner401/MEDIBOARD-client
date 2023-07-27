@@ -9,8 +9,8 @@
 
 /* 추가한 항목 */
 .Embed-container {
-  height: 500px;
-  width: 800px;
+  height: 240px;
+  width: 400px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #E5ECF4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
