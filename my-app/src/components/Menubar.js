@@ -4,17 +4,32 @@ const Menubar = (props) => {
     return (
       <NavContainer>
         <TextLink to={'/'}>
-          <LogoImage src={require("public\media\logo.png")} alt={`GGG logo`} />
+          <LogoImage src={require("public\media\logo.png")} alt={`logo`} />
         </TextLink>
         <MenuWrapper>
           <TextLink to={'/'}>
-            <Text>메인화면</Text>
+            <LogoImage src={require("public\media\home_icon.png")} alt={`home`} />
+            <Text>서비스 소개 페이지</Text>
           </TextLink>
-          <TextLink to={'/select'}>
-            <Text>스테이지 선택</Text>
+
+          <TextLink to={'/dashboard'}>
+            <LogoImage src={require("public\media\dashboard_icon.png")} alt={`dashboard`} />
+            <Text>커스텀 대시보드 페이지</Text>
           </TextLink>
-          <TextLink to={'/my'}>
-            <Text>일러스트 열람</Text>
+
+          <TextLink to={'/chart'}>
+            <LogoImage src={require("public\media\chart_icon.png")} alt={`chart`} />
+            <Text>통계 자료 데이터 목록 페이지</Text>
+          </TextLink>
+
+          <TextLink to={'/news'}>
+            <LogoImage src={require("public\media\news_icon.png")} alt={`news`} />
+            <Text>뉴스 요약 페이지</Text>
+          </TextLink>
+
+          <TextLink to={'/rank'}>
+            <LogoImage src={require("public\media\rank_icon.png")} alt={`rank`} />
+            <Text>데이터 활용 차트 순위 목록 페이지</Text>
           </TextLink>
         </MenuWrapper>
         { user ? (

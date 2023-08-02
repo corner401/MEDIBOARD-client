@@ -8,7 +8,7 @@ const SignupPage = () => {
     <div className={styles.overlay}></div>   {/*  반투명 배경 블록 */}
     <img src="./media/logo.png" alt="logo" id={styles.logo_img} />  {/* 로고 이미지 */}
     <div id={styles.signup_stuff}>            
-        <h1 id={styles.service_name}> 서비스 명 </h1>  {/* 서비스 명 텍스트 */}
+        <h1 id={styles.service_name}> MEDIBOARD </h1> 
         <h2 id={styles.sign_up}>Sign Up</h2>
         <div id={styles.box}>Email</div> 
         <div id={styles.box}>User Name</div> 
