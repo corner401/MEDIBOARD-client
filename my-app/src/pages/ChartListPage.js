@@ -1,8 +1,10 @@
 //{/* 통계 자료 데이터 목록 페이지 chart*/}
 
-import React from 'react';
+import React, { Fragment } from 'react';
+import styles from '../css/chartListPage.module.css';
 import ChartList from '../components/ChartList';
 import HashTag from '../components/HashTag';
+import Menubar from '../components/Menubar';
 
 const ChartListPage = () => {
 
@@ -32,8 +34,10 @@ const ChartListPage = () => {
   })
 
   return (
-    <div>
-      <div> {/* 검색창 */}
+    <>
+    <Menubar />
+    <div className={styles.main}>
+      <div id={styles.searchBox}> {/* 검색창 */}
         <p>검색어를 입력하세요</p>
         <img src="../media/search.png" alt="search 돋보기"/> 
       </div>  
@@ -46,6 +50,7 @@ const ChartListPage = () => {
         <ChartList data={chartList} />
       </div>
     </div>
+    </>
   );
 };
 
