@@ -1,6 +1,6 @@
 /** login.html 파일의 css */
 
-body {
+.page_container {
     background-image: url("../media/background_login.png");
     background-size: cover; /* 화면에 가득 채우도록 조정 */
     background-repeat: no-repeat; /* 이미지 반복 없음 */
