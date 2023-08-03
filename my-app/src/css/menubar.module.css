@@ -7,9 +7,38 @@
     top: 0;
     left: 0;
     background-color: #5170FD;
+    border-radius: 0 30px 30px 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.blank {
+    height: 20px;
+}
+
+.menu {
+    display: inline-block;
+    width: 80px;
+    height: 100px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.menutext {
+    color: white;
+    text-align: center;
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
 }
