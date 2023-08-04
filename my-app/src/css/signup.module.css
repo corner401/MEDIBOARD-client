@@ -47,17 +47,19 @@
 }
 
 #service_name {
+    z-index: 2;
     position: absolute;
     max-width: 8vw;  /* vw 현재 열려있는 브라우저 width값의 n% */
     margin-top: 1vw;
 }
 
 #sign_up {
+    z-index: 2;
     padding-top: 5vw;
     margin-right: 50vh;
 }
 
-#box {
+.box {
     z-index: 2;
     width: 20vw;  /* vw 현재 열려있는 브라우저 width값의 n% */
     margin-top: 1vw;
@@ -67,6 +69,10 @@
     font-size: medium;
 }
 
+.job_group {
+    z-index: 2;
+}
+
 #job_check {
     z-index: 2;
     display: flex;
@@ -74,6 +80,25 @@
     width: 30vw; /* 이미지의 너비를 300px로 설정합니다. */
     height: auto; 
     margin-top: 2vw;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    background-color: rgba(14, 21, 30, 0.7);;
+    border-radius: 30px;
 }
 
 #box_button {

@@ -59,7 +59,7 @@
     margin-right: 50vh;
 }
 
-#box {
+.box {
     z-index: 2;
     width: 20vw;  /* vw 현재 열려있는 브라우저 width값의 n% */
     margin-top: 1vw;
