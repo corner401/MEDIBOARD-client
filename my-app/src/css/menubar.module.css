@@ -1,12 +1,12 @@
 /** Menubar.js 파일의 css **/
 
 .container {
-    width: 80px;
+    width: 85px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #5170FD;
+    background-color: #5170fd;
     border-radius: 0 30px 30px 0;
 }
 
@@ -20,18 +20,40 @@
 }
 
 .blank {
-    height: 20px;
+    height: 60px;
 }
 
 .menu {
     display: inline-block;
-    width: 80px;
-    height: 100px;
+    width: 85px;
+    height: 120px;
     text-decoration: none;
     text-align: center;
     margin: 10px 0;
+    background-color: #5170fd;
+
+    border-radius: 0 0;
+    transition-property: background-color, border-radius;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
+.menu:hover {
+    width: 85px;
+    border-radius: 10px 0 0 10px;
+    background-color: #ffffff;
+}
+
+.menu:hover > .icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    filter: opacity(0.5) drop-shadow(0 0 0 #5170fd);
+}
+.menu:hover > .menutext {
+    color: #5170fd;
+    text-align: center;
+}
 .menutext {
     color: white;
     text-align: center;
@@ -40,5 +62,5 @@
 .icon {
     width: 40px;
     height: 40px;
-    padding: 20px;
+    padding: 10px;
 }

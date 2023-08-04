@@ -2,7 +2,7 @@
 
 .main_stuff {
     width: 100vw;
-    height: 5100px;
+    height: 4800px;
     background-color: #eff2ff;
     margin: 0 auto;
     display: flex;
@@ -55,10 +55,8 @@
     flex-direction: row; /* 수직으로 배치하도록 변경합니다. */
 }
 
-#img_1,
-#img_2 {
-    width: 60vw;
-    padding: 2vh 2vh;
+.info_img {
+    /* padding: 2vh 2vh; */
     height: auto;
 }
 
@@ -75,13 +73,12 @@
     font-size: 20px;
 }
 
-#icon_1,
-#icon_2 {
+.info_icon {
     width: 8vw;
 }
 
 #quick_link {
-    /* background-color: rgb(244, 211, 211); */
+    background-color: rgb(255, 255, 255);
     display: flex;
     width: 100vw;
     height: 30vh;
@@ -187,10 +184,10 @@
     width: 60vw;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 10px 10px 10px rgb(209, 209, 209);
+    box-shadow: 10px 10px 10px rgb(95, 95, 95);
     z-index: 2;
     position: absolute;
-    top: 4500px;
+    top: 4050px;
     left: 20vw;
     border: none;
 }

@@ -39,16 +39,16 @@ const MainPage = () => {
 
             <div id={styles.info_1}>
                 <img
-                    src="./media/main_logo.png"
+                    src={require("../media/main_1.png")}
                     alt="main_1"
-                    id={styles.img_1}
+                    className={styles.info_img}
                 />
 
                 <div id={styles.desc_1}>
                     <img
-                        src="./media/main_logo.png"
+                        src={require("../media/icon_1.png")}
                         alt="icon_1"
-                        id={styles.icon_1}
+                        className={styles.info_icon}
                     />
                     <p>보건 데이터 종류 수</p>
                 </div>
@@ -57,16 +57,16 @@ const MainPage = () => {
             <div id={styles.info_2}>
                 <div id={styles.desc_2}>
                     <img
-                        src="./media/main_logo.png"
+                        src={require("../media/icon_2.png")}
                         alt="icon_2"
-                        id={styles.icon_2}
+                        className={styles.info_icon}
                     />
                     <p>공공 데이터 수</p>
                 </div>
                 <img
-                    src="./media/main_logo.png"
+                    src={require("../media/main_2.png")}
                     alt="main_2"
-                    id={styles.img_2}
+                    className={styles.info_img}
                 />
             </div>
 
