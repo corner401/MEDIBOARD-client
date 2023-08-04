@@ -1,6 +1,9 @@
 //{/* 커스텀 대시보드 페이지  */}
 
 import React from "react";
+import styles from "../css/rank.module.css";
+import { PowerBIEmbed } from "powerbi-client-react";
+import { models } from "powerbi-client";
 import ChartList from "../components/ChartList";
 import Menubar from "../components/Menubar";
 
@@ -42,37 +45,66 @@ const DashboardPage = () => {
             embedUrl: embedUrl3,
             accessToken: accessToken3,
         },
+        {
+            title: "제목1",
+            reportId: reportId1,
+            embedUrl: embedUrl1,
+            accessToken: accessToken1,
+        },
+        {
+            title: "제목2",
+            reportId: reportId2,
+            embedUrl: embedUrl2,
+            accessToken: accessToken2,
+        },
+        {
+            title: "제목3",
+            reportId: reportId3,
+            embedUrl: embedUrl3,
+            accessToken: accessToken3,
+        },
+        {
+            title: "제목1",
+            reportId: reportId1,
+            embedUrl: embedUrl1,
+            accessToken: accessToken1,
+        },
+        {
+            title: "제목2",
+            reportId: reportId2,
+            embedUrl: embedUrl2,
+            accessToken: accessToken2,
+        },
+        {
+            title: "제목3",
+            reportId: reportId3,
+            embedUrl: embedUrl3,
+            accessToken: accessToken3,
+        },
     ];
 
     return (
         <>
             <Menubar />
-            <div>
-                {/* <img src="../media/nav.png" alt="좌측 나브 바" />  */}
+            <div className={styles.main}>
                 <div>
                     {" "}
                     {/* 상단 나브 바*/}
-                    <img
-                        src="../media/dashboardpage_nav.png"
-                        alt="상단 나브 바"
-                    />
-                    <div>
-                        {" "}
-                        {/* 대시보드 항목 */}
-                        <p>대시보드 1</p> {/* 기본 대시보드 1 */}
-                        <img
-                            src="../media/more_dashboard.png"
-                            alt="대시보드 추가 버튼"
-                        />
-                    </div>
-                    <div>
-                        {" "}
-                        {/* 사용자 정보 */}
-                        <p>User Name</p> {/* 사용자 닉네임 */}
-                        <img
-                            src="../media/Entrepreneur.png"
-                            alt="유저 직군 이미지"
-                        />
+                    <div id={styles.menu_titlebar}>
+                        <div id={styles.menu_left}>
+                            <img
+                                src={require("../media/dashboard_icon_title.png")}
+                                alt="main_1"
+                            />
+                            <h2 id={styles.menu_title}>커스텀 대시보드</h2>
+                        </div>
+                        <div id={styles.menu_right}>
+                            <h3 id={styles.user_name}>user name</h3>
+                            <img
+                                src={require("../media/Entrepreneur.png")}
+                                alt="main_1"
+                            />
+                        </div>
                     </div>
                 </div>
 
