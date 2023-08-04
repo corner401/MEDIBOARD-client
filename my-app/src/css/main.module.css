@@ -157,10 +157,11 @@
 
 #main_bottom {
     margin-top: 20vh;
-    width: 100%;
+    width: 100vw;
     height: 30vh;
-    background-image: url("/media/main_bottom.png");
-    background-color: #2f44a3;
+    background-image: url("../media/main_bottom.png");
+    background-repeat: no-repeat;
+    /* background-color: #2f44a3; */
     color: white;
     text-align: center;
     font-size: 2em;
