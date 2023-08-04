@@ -1,0 +1,54 @@
+/* rankPage.js 파일의 css */
+.main {
+    padding: 20px;
+    margin-left: 80px;
+    background-color: #eff2ff;
+}
+
+#menu_titlebar {
+    margin-left: 1vw;
+    margin-bottom: 7vh;
+    width: 90vw;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu_left,
+#menu_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+#menu_title {
+    margin-left: 3vh;
+}
+
+#user_name {
+    margin-right: 3vh;
+}
+
+#chart_body {
+    margin: 10vh 0vh 10vh 2vh;
+}
+
+.job_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.job_img {
+    width: 60px;
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(316deg)
+        brightness(97%) contrast(103%);
+}
