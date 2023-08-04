@@ -1,7 +1,30 @@
 import React from "react";
 import styles from "../css/main.module.css";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
+    const navigate = useNavigate();
+
+    const goToLogin = () => {
+        navigate("/login");
+    };
+
+    const goToDashboard = () => {
+        navigate("/dashboard");
+    };
+
+    const goToChart = () => {
+        navigate("/chart");
+    };
+
+    const goToNews = () => {
+        navigate("/news");
+    };
+
+    const goToRank = () => {
+        navigate("/rank");
+    };
+
     return (
         <div className={styles.main_stuff}>
             <div className={styles.start_main}>
@@ -50,7 +73,7 @@ const MainPage = () => {
             <div id={styles.quick_link}>
                 <h3 id={styles.link_title}>Quick Link</h3>
                 <div id={styles.menu_link}>
-                    <div className={styles.menu_box}>
+                    <div className={styles.menu_box} onClick={goToDashboard}>
                         <img
                             src="./media/dashboard_icon.png"
                             alt="dashboard_icon"
@@ -60,7 +83,7 @@ const MainPage = () => {
                             CUSTOM <br></br>DASHBOARD
                         </p>
                     </div>
-                    <div className={styles.menu_box}>
+                    <div className={styles.menu_box} onClick={goToChart}>
                         <img
                             src="./media/chart_icon.png"
                             alt="chart_icon"
@@ -70,7 +93,7 @@ const MainPage = () => {
                             STATISTICAL<br></br>DATA LIST
                         </p>
                     </div>
-                    <div className={styles.menu_box}>
+                    <div className={styles.menu_box} onClick={goToNews}>
                         <img
                             src="./media/news_icon.png"
                             alt="news_icon"
@@ -80,7 +103,7 @@ const MainPage = () => {
                             NEWS <br></br> SUMMARY
                         </p>
                     </div>
-                    <div className={styles.menu_box}>
+                    <div className={styles.menu_box} onClick={goToRank}>
                         <img
                             src="./media/rank_icon.png"
                             alt="rank_icon"
@@ -193,7 +216,7 @@ const MainPage = () => {
                 </p>
             </div>
 
-            <button id={styles.start_btn}>
+            <button id={styles.start_btn} onClick={goToLogin}>
                 <h3>시작하기</h3>
                 <img
                     src="./media/main_logo.png"
