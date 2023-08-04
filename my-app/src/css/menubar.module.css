@@ -48,7 +48,9 @@
     width: 40px;
     height: 40px;
     padding: 10px;
-    filter: opacity(0.5) drop-shadow(0 0 0 #5170fd);
+    /* filter: opacity(0.5) drop-shadow(0 0 0 #5170fd); */
+    filter: invert(47%) sepia(98%) saturate(1363%) hue-rotate(207deg)
+        brightness(91%) contrast(92%);
 }
 .menu:hover > .menutext {
     color: #5170fd;
