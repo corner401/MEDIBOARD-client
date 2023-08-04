@@ -1,0 +1,128 @@
+/** mainPage 파일의 css */
+
+.main_stuff {
+    width: 100vw;
+    background-color: #eff2ff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.start_main {
+    /* main_stuff 태그 내부의 모든 요소를 가운데 정렬합니다. */
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 60vh;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+    /* 수직으로 배치하도록 변경합니다. */
+}
+
+#logo_img {
+    margin: 0 auto;
+    margin-top: 10vh;
+    max-width: 10vw; /* vw 현재 열려있는 브라우저 width값의 n% */
+    height: auto;
+    display: block;
+}
+
+#title {
+    margin-top: 50px;
+    color: #2f44a3;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 3rem;
+    text-shadow: 3px 3px 3px gray;
+}
+
+#title_info {
+    margin-top: 3vh;
+    color: #2f44a3;
+    font-size: 1rem;
+}
+
+#info_1,
+#info_2 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 20vh;
+    flex-direction: row; /* 수직으로 배치하도록 변경합니다. */
+}
+
+#img_1,
+#img_2 {
+    width: 60vw;
+    padding: 2vh 2vh;
+    height: auto;
+}
+
+#desc_1,
+#desc_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text_1,
+#text_2 {
+    font-size: 20px;
+}
+
+#icon_1,
+#icon_2 {
+    width: 10vh;
+}
+
+#quick_link {
+    background-color: rgb(244, 211, 211);
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    margin-top: 30vh;
+    flex-direction: column; /* 수직으로 배치하도록 변경합니다. */
+}
+
+#link_title {
+    margin: 2vh 2vh;
+    font-size: 2rem;
+    margin-bottom: 5vh;
+}
+
+#menu_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_link {
+    color: #667ce1;
+    width: 8vh;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.menu_desc {
+    background-color: rgb(108, 108, 108);
+    margin: 0 auto;
+    display: flex;
+    width: 90vw;
+    height: 30vh;
+    margin-top: 10vh;
+    padding-left: 5vh;
+    padding-top: 5vh;
+    flex-direction: row;
+}
