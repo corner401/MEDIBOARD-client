@@ -39,6 +39,10 @@
     margin: 10vh 0vh 10vh 2vh;
 }
 
+.group_box {
+    margin-bottom: 4vh;
+}
+
 .job_group {
     display: flex;
     flex-direction: row;

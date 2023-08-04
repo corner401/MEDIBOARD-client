@@ -77,7 +77,7 @@ const RankPage = () => {
                 <div id={styles.chart_body}>
                     {" "}
                     {/* 4가지 항목별 직군 */}
-                    <div>
+                    <div className={styles.group_box}>
                         {" "}
                         {/* 의료계 사업자 순위 목록 */}
                         <div className={styles.job_group}>
@@ -96,7 +96,7 @@ const RankPage = () => {
                             <ChartList data={chartList} />
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.group_box}>
                         {" "}
                         {/* 의료진 순위 목록 */}
                         <div className={styles.job_group}>
@@ -115,7 +115,7 @@ const RankPage = () => {
                             <ChartList data={chartList} />
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.group_box}>
                         {" "}
                         {/* 환자 순위 목록 */}
                         <div className={styles.job_group}>
@@ -134,7 +134,7 @@ const RankPage = () => {
                             <ChartList data={chartList} />
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.group_box}>
                         {" "}
                         {/* 기타 순위 목록 */}
                         <div className={styles.job_group}>
