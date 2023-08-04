@@ -1,0 +1,41 @@
+.cardContainer {
+    display: inline-block;
+    width: 400px;
+    height: 240px;
+    background-color: white;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.cardContainer:active {
+    color: black;
+}
+
+.title_container {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.star_button {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: 0;
+    margin-top: 4px;
+}
+
+.star_icon {
+    width: 30px;
+    height: 30px;
+}
