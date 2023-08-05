@@ -6,6 +6,7 @@ import { PowerBIEmbed } from "powerbi-client-react";
 import { models } from "powerbi-client";
 import Menubar from "../components/Menubar";
 import ChartList from "../components/ChartList";
+import TopNav from "../components/TopNav";
 
 const RankPage = () => {
     const reportId1 = "99fc4531-73f3-4bda-b8f9-ef2d9948d577";
@@ -46,10 +47,20 @@ const RankPage = () => {
             accessToken: accessToken3,
         },
     ];
+    
+//  상단 나브 바
+        const pageIconAddress = "../media/ran_icon_title.jpg";
+        const pageTitleText = '데이터 활용 차트 순위 목록';
+
 
     return (
         <>
+            {/* 좌측 나브 바 */}
             <Menubar />
+
+            {/* 상단 나브 바 */}
+            <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+
             <div className={styles.main}>
                 <div>
                     {" "}
@@ -58,7 +69,7 @@ const RankPage = () => {
                         <div id={styles.menu_left}>
                             <img
                                 src={require("../media/rank_icon_title.png")}
-                                alt="main_1"
+                                alt="main_1"  
                             />
                             <h2 id={styles.menu_title}>
                                 데이터 활용 차트 순위 목록
