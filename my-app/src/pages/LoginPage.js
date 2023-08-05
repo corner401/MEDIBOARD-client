@@ -46,15 +46,18 @@ const LoginPage = () => {
     >
       {({ values, handleSubmit, handleChange }) => (
         <div className={styles.page_container}>
-          <div className={styles.login_stuff}>
+          <div className={styles.container}>
             <div className={styles.overlay}></div>   
-            <img src="./media/logo.png" alt="logo" id={styles.logo_img} /> 
-            <form onSubmit={handleSubmit}>
-              <div id={styles.signup_stuff}>            
-                <h1 id={styles.service_name}> MEDIBOARD </h1>  
-                <h2 id={styles.login}>Login</h2>
+            <div className={styles.logo_box}>
+              <img src="./media/logo.png" alt="logo" id={styles.logo_img} /> 
+              <h1 id={styles.service_name}> MEDIBOARD </h1>  
+            </div>
+                        
+            <div id={styles.form_box}>            
+              <form onSubmit={handleSubmit}>    
+                <h2 id={styles.title}>Login</h2>
                 <input
-                  className={styles.box}
+                  className={styles.input_text}
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -62,17 +65,19 @@ const LoginPage = () => {
                   value={values.email}
                   onChange={handleChange} />
                 <input
-                  className={styles.box}
+                  className={styles.input_text}
                   type="password"
                   name="password"
                   placeholder="Password"
                   id="password"
                   value={values.password}
                   onChange={handleChange} />
-                <a id={styles.sign_up_page} href="./signup">Sign Up</a>
-                <button type="submit" id={styles.box_button}>Login</button>
-              </div>
-            </form>
+                <div id={styles.sign_up_page}>
+                  <a id={styles.link_text} href="./signup">Sign Up</a>
+                </div>
+                <button type="submit" id={styles.submit_button}>Login</button>
+              </form>
+            </div>
           </div>
         </div>
       )}
