@@ -59,6 +59,8 @@
 .menutext {
     color: white;
     text-align: center;
+    font-size: small;
+    font-weight: 200;
 }
 
 .icon {
