@@ -1,6 +1,6 @@
 //{/* 통계 자료 데이터 목록 페이지 chart*/}
-
-import React, { Fragment } from 'react';
+import React from 'react';
+// import React, { Fragment } from 'react';
 import styles from '../css/chartListPage.module.css';
 import ChartList from '../components/ChartList';
 import HashTag from '../components/HashTag';

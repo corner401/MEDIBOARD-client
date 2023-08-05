@@ -1,0 +1,124 @@
+.detailRootTag {
+    overflow: hidden; /* 스크롤을 없애는 속성 */
+    padding: 20px;
+	margin-left: 80px;
+    background-color: #EFF2FF;
+    height: 3000px;
+}
+
+.detailTagList{
+    background-color: #EFF2FF;
+}
+
+/** 윗면 나브 바 고정  */
+.upperNav {
+    justify-content: space-between;
+    position: fixed;
+
+    top: 0;
+    /*left: 5;
+    right: 1; */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+} 
+
+#upperNavPng {
+    position: relative;
+
+    width: 100%;
+    /* height: 100%; */
+    top: 0;
+    left: 5;
+    right: 0;
+    z-index: 1;
+
+}
+
+#upperNavInfo {
+    position: relative;
+    z-index: 2;
+
+    font-size:x-large;
+    font-weight: 800;
+
+    margin-top: -4.2%;
+    margin-left: 30%;
+}
+
+
+#upperNavPlus {
+    position: relative;
+    z-index: 2;
+
+    padding-bottom: 1.5%;
+    margin-top: -50%;
+    margin-left: 38%;
+    max-width: 50px;
+}
+
+#upperNavUserName {
+    position: relative;
+    z-index: 2;
+
+    margin-top: -4.2%;
+    margin-left: 87%;
+    font-size:x-large;
+    font-weight: 500;
+}
+
+#upperNavUserPng {
+    position: relative;
+    z-index: 2;
+
+    padding-bottom: 1%;
+    margin-top: -50%;
+    margin-left: 95%;
+    max-width: 90px;
+}
+
+.detailTag {
+    margin-top: 7%;
+    margin-bottom: 0%;
+}
+
+.detailTitle {
+    margin-top: 0.8%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+    font-size:xx-large;
+    font-weight: 800;
+}
+
+.detailContent {
+    margin-top: 0.8%;
+    margin-bottom: 0%;
+    margin-left: 1%;
+    font-size:larger;
+    font-weight: 500;
+}
+
+.detailSource {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    font-size:medium;
+    font-weight: 300;
+    
+}
+
+/* .detailPowerbi {
+    width: '1000px';
+    height: '600px';
+} */
+.reportContainer {
+    min-width: 1080px;
+    min-height: 2000px;
+    
+}
+
+.Embed_container {
+    width: 900px;
+    height: 1000px;    
+
+}
