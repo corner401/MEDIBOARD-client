@@ -19,20 +19,23 @@
 }
 
 .title {
-    display: inline-block;
     padding: 10px;
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     font-weight: bold;
 }
 
+.hashtag {
+    display: inline-block;
+    
+}
+
 .star_button {
     margin-left: auto;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: none;
     background: 0;
-    margin-top: 4px;
 }
 
 .star_icon {
