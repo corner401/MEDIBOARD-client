@@ -112,11 +112,20 @@
     height: '600px';
 } */
 
-#chartContainer {
+#reportContainer {
     /* min-width: 1080px; */
-    /* min-height: 3000px; */
+    height: 600px;
     /* height: 3000px; */
+    
     text-align: center;
+}
+
+#chartContainer {
+    text-align: center;
+}
+
+#iframe {
+    height: 580px;
 }
 
 .newsContainer {
