@@ -34,35 +34,10 @@ const ChartDetailPage = () => {
     })
   }, []);
   
-  //* #검색어
-  const reportId1 = "99fc4531-73f3-4bda-b8f9-ef2d9948d577";
-	const embedUrl1 = "https://app.powerbi.com/reportEmbed?reportId=30a825e3-341b-40a9-9466-ae3763719b5e&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQS1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6dHJ1ZSwidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d";
-	const accessToken1 = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYzMwZmViZWUtNzU4Yy00ZGUxLWJhNTEtYzdmZjNhNWE3MGM2LyIsImlhdCI6MTY5MDk4MDQ0NywibmJmIjoxNjkwOTgwNDQ3LCJleHAiOjE2OTA5ODU3MjAsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVFFBeS84VUFBQUFLeEsrOGdKck5yazdnQWw3VCt4SG1pRU5HeDA4a29IdlJ5L3AyTFI5dWI1TUpvRCtLSTRUNVZkME1rQ21tb3VQIiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6Ijg3MWMwMTBmLTVlNjEtNGZiMS04M2FjLTk4NjEwYTdlOTExMCIsImFwcGlkYWNyIjoiMCIsImlwYWRkciI6IjE3NS4xMTUuMjMzLjE3NiIsIm5hbWUiOiJEYW5pZWwgRmFybGV5Iiwib2lkIjoiMWE0YjM0MWEtNTlhOC00YjFiLTgzMjMtNzc2MzU2ZTNmNzc3IiwicHVpZCI6IjEwMDMyMDAwRkNFQzc1NkYiLCJyaCI6IjAuQVJNQTd1c1B3NHgxNFUyNlVjZl9PbHB3eGdrQUFBQUFBQUFBd0FBQUFBQUFBQURhQU1jLiIsInNjcCI6InVzZXJfaW1wZXJzb25hdGlvbiIsInNpZ25pbl9zdGF0ZSI6WyJrbXNpIl0sInN1YiI6IllZLVRQamF1a0JBU2Flc3JxdDUzS1R6NXloR25nVWlyQ2tiUlROalBCWUEiLCJ0aWQiOiJjMzBmZWJlZS03NThjLTRkZTEtYmE1MS1jN2ZmM2E1YTcwYzYiLCJ1bmlxdWVfbmFtZSI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInVwbiI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInV0aSI6IkRkVWJkNFRvVGtPQTBoTERMZmhVQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdfQ.Voak5PXKWuv6IqtjbsTZVC099sAR8z8LXmAWRgmnyCktmoGwZXxLmIkweU4o7DRRs8I2cMU-x6ey-Q16bsswEemUM14TNAWNENnGKmHVvgo_4XajMJJ1JrFPU-HM9ji-EX3F37aZrVw9re0-FnAik6dn8EDtqjhUWb7nw3Anf81DEfR09pH_4rwcN1-zQimDlcR5IhOFcbX2a6uUUJo7PWBNsdGZ26-fJWk0JfCIqBPNz3IbjSoYeK704zFzcG4AhEUesw0T7ZU6euweZdbrjVY_GQIjcD3OIE3SA4a0yiDQkfOFbYEy2UslPn9G-dbQ1oZaSXEjM1UVisqqYAhGDA';
-
   const TagList = tagList && tagList.map((data, index) => {
     return <HashTag tagName={data} key={index} className={styles.detailTagList}  />
   })
 
-//* 뉴스 
-  const newsTitle1 = "oo버섯 사용 결과... “△△ 암 개선에 효과적”";
-  const newsContents1 = "ㅁㅁ대 약학과 ◎◎◎교수, 23일 등재된 논문에 따르면,,"; 
-  const newsAuthor1 = "YTS";
-  const newsDate1 = "2024/02/14";
-
-  const newsTitle2 = "oo버섯 사용 결과... “△△ 암 개선에 효과적”";
-  const newsContents2 = "ㅁㅁ대 약학과 ◎◎◎교수, 23일 등재된 논문에 따르면,,"; 
-  const newsAuthor2 = "YTS";
-  const newsDate2 = "2024/02/14";
-
-  const newsTitle3 = "oo버섯 사용 결과... “△△ 암 개선에 효과적”";
-  const newsContents3 = "ㅁㅁ대 약학과 ◎◎◎교수, 23일 등재된 논문에 따르면,,"; 
-  const newsAuthor3 = "YTS";
-  const newsDate3 = "2024/02/14";
-
-  const newsList = [{ newsTitle: newsTitle1, newsContents: newsContents1, newsAuthor: newsAuthor1, newsDate: newsDate1 },
-                    { newsTitle: newsTitle2, newsContents: newsContents2, newsAuthor: newsAuthor2, newsDate: newsDate2 },
-                    { newsTitle : newsTitle3, newsContents : newsContents3, newsAuthor : newsAuthor3, newsDate : newsDate3}]
-  
 //  상단 나브 바
   const pageIconAddress = "../media/dashboard_icon_title.jpg";
   const pageTitleText = '데이터 활용 차트 순위 목록';

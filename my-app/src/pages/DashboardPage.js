@@ -2,8 +2,6 @@
 
 import React from "react";
 import styles from "../css/rank.module.css";
-import { PowerBIEmbed } from "powerbi-client-react";
-import { models } from "powerbi-client";
 import ChartList from "../components/ChartList";
 import Menubar from "../components/Menubar";
 import TopNav from "../components/TopNav";
