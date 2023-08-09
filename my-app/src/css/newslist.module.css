@@ -1,0 +1,8 @@
+.main_stuff {
+    display: flex;
+    margin-top: 100px;
+}
+
+#newsbox {
+    flex-direction: row;
+}

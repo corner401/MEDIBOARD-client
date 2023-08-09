@@ -1,11 +1,11 @@
 .top_nav_root {
     padding: 20px;
-    margin-left: 80px;
+    margin-left: 0px;
 
     /* 나브 바 고정 */
-    justify-content: space-between;
+    /* justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 0; */
 }
 
 #menu_titlebar {

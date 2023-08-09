@@ -10,7 +10,6 @@ import HashTag from '../components/HashTag';
 import Menubar from '../components/Menubar';
 import { Link } from 'react-router-dom';
 import ChartCard from '../components/ChartCard';
-import NewsCard from '../components/NewsCard';
 import NewsList from '../components/NewsList';
 
 // import PowerBIEmbed from '../components/PowerBIEmbed'; // PowerBIComponent.js 파일 경로에 맞게 수정
