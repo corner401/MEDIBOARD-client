@@ -1,16 +1,14 @@
 .top_nav_root {
-    padding: 20px;
-    margin-left: 80px;
+    margin: 20px
 
     /* 나브 바 고정 */
-    justify-content: space-between;
+    /* justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 0; */
 }
 
 #menu_titlebar {
     margin-left: 1vw;
-    margin-bottom: 7vh;
     width: 90vw;
     height: 80px;
     background-color: #ffffff;

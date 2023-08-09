@@ -1,19 +1,20 @@
 import React from 'react';
-import NewsCard from "./NewsCard"
+import NewsBox from './NewsBox'; 
+import styles from "../css/newslist.module.css";
 
 const NewsList = (props) => {
 
-  const data = props.data || null;  // 차트 배열
+  const data = props.data || null; // 뉴스 기사 배열
 
   const NewsList = data.map((data, index) => {
-    return <NewsCard data={data} key={index} />;
+    return <NewsBox data={data} key={index} />;
   });
 
-    return (
-        <div>
-            {NewsList}
-        </div>
-    );
+  return (
+    <div className={styles.main_stuff}>
+      {NewsList}
+    </div>
+  );
 };
 
 export default NewsList;

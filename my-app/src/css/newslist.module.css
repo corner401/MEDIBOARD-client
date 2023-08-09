@@ -1,0 +1,8 @@
+.main_stuff {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#newsbox {
+    flex-direction: row;
+}

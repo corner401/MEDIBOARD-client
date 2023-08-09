@@ -2,11 +2,16 @@
 
 import React from "react";
 import styles from "../css/rank.module.css";
-import { PowerBIEmbed } from "powerbi-client-react";
-import { models } from "powerbi-client";
 import ChartList from "../components/ChartList";
 import Menubar from "../components/Menubar";
+import TopNav from "../components/TopNav";
 
+
+//* 상단 나브 바 
+const pageIconAddress = "../media/dashboard_icon_title.jpg";
+const pageTitleText = '커스텀 대시보드';
+
+//* 대시보드 상세 정보
 const DashboardPage = () => {
     const reportId1 = "99fc4531-73f3-4bda-b8f9-ef2d9948d577";
     const embedUrl1 =
@@ -90,22 +95,8 @@ const DashboardPage = () => {
                 <div>
                     {" "}
                     {/* 상단 나브 바*/}
-                    <div id={styles.menu_titlebar}>
-                        <div id={styles.menu_left}>
-                            <img
-                                src={require("../media/dashboard_icon_title.png")}
-                                alt="main_1"
-                            />
-                            <h2 id={styles.menu_title}>커스텀 대시보드</h2>
-                        </div>
-                        <div id={styles.menu_right}>
-                            <h3 id={styles.user_name}>user name</h3>
-                            <img
-                                src={require("../media/Entrepreneur.png")}
-                                alt="main_1"
-                            />
-                        </div>
-                    </div>
+                    <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+
                 </div>
 
                 <div>

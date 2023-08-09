@@ -10,7 +10,7 @@ const ChartCard = (props) => {
   const accessToken = data.accessToken;
 
   return (
-    <Link className={styles.cardContainer}>
+    <Link className={styles.cardContainer} to={`/chart/detail`} state={{ data: data && data.id }}>
       <div className={styles.title_container}>
         <div className={styles.title}>{data.title}</div>
         <button className={styles.star_button}>

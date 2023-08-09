@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from '../css/login.module.css';
 import { Formik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -27,11 +27,10 @@ const LoginPage = () => {
     };
 
     dispatch(loginUser(userInfo)).then((response) => {
-      console.log(response);
       if (response.payload) {
         // 로그인 성공
         alert("로그인 성공");
-        navigate("/");
+        navigate("/chart");
       }
     });
   };

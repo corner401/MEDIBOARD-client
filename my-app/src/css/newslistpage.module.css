@@ -1,0 +1,57 @@
+/** newslistpage 파일의 css */
+
+.main_stuff {
+    width: 100vw;
+    height: 4800px;
+    background-color: #eff2ff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    margin-left: 80px;
+}
+
+
+#search_box {
+    max-width: 540px;
+    height: 60px;
+    margin: auto;
+    background-color: #e0e6ff;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 3vh;
+}
+
+#search_input {
+    width: 430px;
+    display: inline-block;
+    height: 30px;
+    margin: 15px 0 0 30px;
+    font-family: Pretendard;
+    font-size: 24px;
+    border: none;
+    background: 0;
+}
+
+
+#search_button {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
+
+#search_icon {
+    width: 40px;
+    height: 40px;
+}
+
+#wordcloud_png {
+    width: 550px;
+    
+    display: flex;
+    margin: auto;
+}

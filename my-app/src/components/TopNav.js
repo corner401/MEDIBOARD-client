@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import styles from "../css/TopNav.module.css";
 
 
 const TopNav = ({ pageIcon, pageTitle }) => {
 
         return (
-            <div class={styles.top_nav_root}>
+            <div className={styles.top_nav_root}>
                 {" "}
                 {/* 상단 나브 바*/}
                 <div id={styles.menu_titlebar}>
