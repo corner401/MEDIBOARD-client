@@ -6,6 +6,7 @@ import Menubar from "../components/Menubar";
 import TopNav from "../components/TopNav";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 //* 상단 나브 바 
 const pageIconAddress = "../media/dashboard_icon_title.jpg";
@@ -17,7 +18,14 @@ const DashboardPage = () => {
     const [pageNum, setPageNum] = useState(1);
     const [chartList, setChartList] = useState([]);
 
+		const navigate = useNavigate();
+
     useEffect(() => {
+
+			if (userId == null) {
+				navigate("/login");
+			}
+
         const body = {
             userId: userId
         }
