@@ -2,7 +2,7 @@ import { combineReducers, createStore, applyMiddleware } from "redux";
 import userReducer from "./userReducer";
 import storage from "redux-persist/lib/storage/session";
 import { persistReducer } from "redux-persist";
-import { createLogger } from "redux-logger";
+// import { createLogger } from "redux-logger";
 import ReduxThunk from "redux-thunk";
 import promiseMiddleware from "redux-promise";
 
@@ -11,7 +11,7 @@ const persistConfig = {
   storage: storage,
 };
 
-const logger = createLogger();
+// const logger = createLogger();
 
 const rootReducer = combineReducers({
   userReducer,
