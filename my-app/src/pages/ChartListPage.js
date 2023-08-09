@@ -23,6 +23,7 @@ const ChartListPage = () => {
         setKeyword(e.target.value);
     }
 
+    // hagtag 검색 추가 예정
     function searchWord() {
         axios.get("/api/stat/list?keyword=" + keyword).then((response) => {
             if (response.data) {
@@ -37,11 +38,6 @@ const ChartListPage = () => {
             setChartList(response.data);
         });
     }, []);
-
-    // hagtag 검색 추가 예정
-    // useEffect(() => {
-
-    // }, [keyword]);
 
     const tagList = [
         "의약품",
