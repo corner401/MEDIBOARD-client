@@ -3,7 +3,7 @@
     padding: 20px;
 	margin-left: 80px;
     background-color: #EFF2FF;
-    height: 3000px;
+    /* height: 2000px; */
 }
 
 .detailTagList{
@@ -104,21 +104,18 @@
     margin-left: 1%;
     font-size:medium;
     font-weight: 300;
-    
 }
 
 /* .detailPowerbi {
     width: '1000px';
     height: '600px';
 } */
-.reportContainer {
-    min-width: 1080px;
-    min-height: 2000px;
-    
-}
 
-.Embed_container {
-    width: 900px;
-    height: 1000px;    
+#reportContainer {
+    /* min-width: 1080px; */
+    /* min-height: 3000px; */
+    /* height: 3000px; */
+    /* text-align: center; */
+	margin-left: 800px;
 
 }

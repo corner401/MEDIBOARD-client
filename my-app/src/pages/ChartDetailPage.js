@@ -57,25 +57,26 @@ const ChartDetailPage = () => {
   const pageTitleText = '데이터 활용 차트 순위 목록';
 
   return (
-    <div className={styles.detailRootTag}>
-      {/* 좌측 나브 바 */}
-      <Menubar /> 
-      
-      <div>
-        {/* 상단 나브 바 */}
-        <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
-         {/* <div > <p id={styles.upperNavInfo} >대시보드 1</p><img src="../media/more_dashboard.png" alt="대시보드 추가 버튼" id={styles.upperNavPlus} /></div>   */}
-      </div>
+    <div>
+      <div className={styles.detailRootTag}>
+        {/* 좌측 나브 바 */}
+        <Menubar /> 
+        
+        <div>
+          {/* 상단 나브 바 */}
+          <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+          {/* <div > <p id={styles.upperNavInfo} >대시보드 1</p><img src="../media/more_dashboard.png" alt="대시보드 추가 버튼" id={styles.upperNavPlus} /></div>   */}
+        </div>
 
         <div>     {/* 상세 정보 */}
           <div className={styles.detailTag}> {/* 예시 해쉬태그# 검색어 */}
             {TagList}
           </div>
-          
+            
           <div>  {/* 차트 제목 title  */}
             <p className={styles.detailTitle}>서울 지역 병원 매출 추이 </p> {/* 차트 제목 title  */}
           </div>
-                                
+                                  
           <div> {/* 차트 설명 content */}
             <p className={styles.detailContent}>서울지역 병원 매출 추이에 대한 그래프입니다.</p>
           </div>
@@ -85,63 +86,74 @@ const ChartDetailPage = () => {
           </div>
         </div>
 
-        <div> {/* powerbi 컴포턴트 불러오기*/}
-          {/* <ChartCard data={ChartCard} /> */}
+      <div> {/* powerbi 컴포턴트 불러오기*/}
+        {/* <ChartCard data={ChartCard} /> */}
+      </div>
+
+      {/* <div>
+        <PowerBIEmbed />
+      </div> */}
+
+        <div id="reportContainer"> {/* powerbi 사이즈 조정 */}
+          
+            {/* powerbi 보고서  > 파일 > 보고서 포함> 웹에 게시 > 웹사이트 또는 포털*/}
+          <iframe  title="가상 공공의료기관현황" width="1000" height="700" src="https://app.powerbi.com/reportEmbed?reportId=30a825e3-341b-40a9-9466-ae3763719b5e&autoAuth=true&ctid=c30febee-758c-4de1-ba51-c7ff3a5a70c6" frameborder="0" allowFullScreen="true"></iframe>
+
+          {/* <PowerBIEmbed
+            embedConfig={{
+                            type: 'report',   // Supported types: report, dashboard, tile, visual, qna, paginated report and create
+                            id: "30a825e3-341b-40a9-9466-ae3763719b5e",  //* '<Report Id>',
+                            
+                            embedUrl: "https://app.powerbi.com/reportEmbed?reportId=30a825e3-341b-40a9-9466-ae3763719b5e&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQS1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6dHJ1ZSwidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",                          
+                            accessToken:'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYzMwZmViZWUtNzU4Yy00ZGUxLWJhNTEtYzdmZjNhNWE3MGM2LyIsImlhdCI6MTY5MTU1MzM4MywibmJmIjoxNjkxNTUzMzgzLCJleHAiOjE2OTE1NTg0MzAsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVFFBeS84VUFBQUFLRlgzU0h5eFpqbk12ZjA1bjNOK1ZDajR4Tmh2WnRPNXc5Y2Vqcnh5QnJVMTdmS0xOYkxlMlZRUVptTFFqM3htIiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6Ijg3MWMwMTBmLTVlNjEtNGZiMS04M2FjLTk4NjEwYTdlOTExMCIsImFwcGlkYWNyIjoiMCIsImlwYWRkciI6IjE3NS4xMTUuMjMzLjE3NiIsIm5hbWUiOiJEYW5pZWwgRmFybGV5Iiwib2lkIjoiMWE0YjM0MWEtNTlhOC00YjFiLTgzMjMtNzc2MzU2ZTNmNzc3IiwicHVpZCI6IjEwMDMyMDAwRkNFQzc1NkYiLCJyaCI6IjAuQVJNQTd1c1B3NHgxNFUyNlVjZl9PbHB3eGdrQUFBQUFBQUFBd0FBQUFBQUFBQURhQU1jLiIsInNjcCI6InVzZXJfaW1wZXJzb25hdGlvbiIsInN1YiI6IllZLVRQamF1a0JBU2Flc3JxdDUzS1R6NXloR25nVWlyQ2tiUlROalBCWUEiLCJ0aWQiOiJjMzBmZWJlZS03NThjLTRkZTEtYmE1MS1jN2ZmM2E1YTcwYzYiLCJ1bmlxdWVfbmFtZSI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInVwbiI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInV0aSI6Ikh5cWlma3owV0VTWXdlTDBKZzBZQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdfQ.G5Yvh2mGE-Rvr364CuPNGSKj0utwtaXRFecXC1ht6jjaiYslnWs_-YwklyJKEwecZKZTdaiDQAWh7ub4NrSqX0wO2OVJX5hWV7ewBbh2ggo4ZI3pxp9Gh1YmE6DaHvLYqUfCO9-RQXjI38HM3eHGqKPInuAhTtuFRbGAD-e5U5_yA5Dx7uC-5YenE3-Poykf16Cg4vBn9cW8wn3IgK-fcOKsL3s4MWNy4TvH5Bd0AxEhTjkr5G6C9kgQUAbaEUpOWwUiEtlVwpjxmqT2PWqt1SFpAN4xdPnap2NU2gzB2CzY6CKaU8KNOF70QJ6E4lWMTbuBmRqfjIKnmdK-A3dM5g',
+                            //* 1시간? 간격 갱신 필요 ㄷㄷ
+
+                            // accessToken: responseConfig.EmbedToken,
+
+                            tokenType: models.TokenType.Aad, // Use models.TokenType.Aad for SaaS embed
+                            settings: {
+                              layoutType: models.LayoutType.Custom,
+                              customLayout: {
+                                displayOption: models.DisplayOption.FitToPage, 
+                              },
+                              panes: {
+                                filters: {
+                                  expanded: false,
+                                  visible: false
+                                }
+                              },
+                              // background: models.BackgroundType.Transparent,
+                },
+              }}
+              
+                          eventHandlers = {
+                            new Map([
+                              ['loaded', function () {console.log('Report loaded');}],
+                              ['rendered', function () {console.log('Report rendered');}],
+                              ['error', function (event) {console.log(event.detail);}],
+                              ['visualClicked', () => console.log('visual clicked')],
+                              ['pageChanged', (event) => console.log(event)],
+                            ])
+                          }
+
+                          cssClassName = { "Embed_container" }
+
+                          getEmbeddedComponent = { (embeddedReport) => {
+                            // window.report = embeddedReport;
+                            window.Report = embeddedReport;
+                          }}
+            /> */}
+
+
         </div>
+      
+        {/* 뉴스 정보 */}
+      <div className={styles.detailNews}> 
+        <NewsList data={newsList} /> 
+      </div>
 
-        {/* <div>
-          <PowerBIEmbed />
-        </div> */}
-
-          <div class="reportContainer"> {/* powerbi 사이즈 조정 */}
-            <PowerBIEmbed
-              embedConfig = {{
-                          type: 'report',   // Supported types: report, dashboard, tile, visual, qna, paginated report and create
-                          id: "30a825e3-341b-40a9-9466-ae3763719b5e",  //* '<Report Id>',
-                          
-                          embedUrl: "https://app.powerbi.com/reportEmbed?reportId=30a825e3-341b-40a9-9466-ae3763719b5e&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUNFTlRSQUwtQS1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6dHJ1ZSwidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",                          
-                          accessToken:'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYzMwZmViZWUtNzU4Yy00ZGUxLWJhNTEtYzdmZjNhNWE3MGM2LyIsImlhdCI6MTY5MTE5MTMwNCwibmJmIjoxNjkxMTkxMzA0LCJleHAiOjE2OTExOTU0MzYsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVFFBeS84VUFBQUFoaDVLRU1iUU5rbkNtMW1YVFphOWpkejNIclpDV2hEM01PcXY2REJqbno5RzhyTGszTVl3N014U09KTTZxOW9tIiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6Ijg3MWMwMTBmLTVlNjEtNGZiMS04M2FjLTk4NjEwYTdlOTExMCIsImFwcGlkYWNyIjoiMCIsImlwYWRkciI6IjE3NS4xMTUuMjMzLjE3NiIsIm5hbWUiOiJEYW5pZWwgRmFybGV5Iiwib2lkIjoiMWE0YjM0MWEtNTlhOC00YjFiLTgzMjMtNzc2MzU2ZTNmNzc3IiwicHVpZCI6IjEwMDMyMDAwRkNFQzc1NkYiLCJyaCI6IjAuQVJNQTd1c1B3NHgxNFUyNlVjZl9PbHB3eGdrQUFBQUFBQUFBd0FBQUFBQUFBQURhQU1jLiIsInNjcCI6InVzZXJfaW1wZXJzb25hdGlvbiIsInN1YiI6IllZLVRQamF1a0JBU2Flc3JxdDUzS1R6NXloR25nVWlyQ2tiUlROalBCWUEiLCJ0aWQiOiJjMzBmZWJlZS03NThjLTRkZTEtYmE1MS1jN2ZmM2E1YTcwYzYiLCJ1bmlxdWVfbmFtZSI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInVwbiI6IksxMjY1MEBvZmZpY2UzNjUuYmx1ZSIsInV0aSI6IlZackZxM2R6eGtpYldBVnlTUjlFQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdfQ.sgenopQqBJxb15vY0iPYAnqkMWgaiFgCRL0S7LUkHqCIpuE246TtfyO4UQVrsVFcSfOloiIr-DM7N3i-T0rzWFyt9UbV9_a9Tf7k4_vSE97zKD2pVdvg8fKFAqM_uHpKF_WpyDYaQdU9Q83WTkO-XMYFPDYbMF2-kEX5uNNuTfLEwYXVT-bFztzk-sDWvDdhA0yLul23qCu-ow2V_t-VOXuFbeLkl4Pe6UhCEijDY3w0h6qmVR0GkM9UA7oyCw6ogkqzV6kMqqR_KkdxssOXjwR0mcNGs6eQxZwXsx7oFx27jSRStv6uyUmoApBjkURP1OF4b4FJ5MW1b1BcT1n76g',
-                          //* 1시간? 간격 갱신 필요 ㄷㄷ
-
-                          tokenType: models.TokenType.Aad, // Use models.TokenType.Aad for SaaS embed
-                          settings: {
-                            layoutType: models.LayoutType.Custom,
-                            customLayout: {
-                              displayOption: models.DisplayOption.fitToWidth
-                            },
-                            panes: {
-                              filters: {
-                                expanded: false,
-                                visible: false
-                              }
-                            },
-                            // background: models.BackgroundType.Transparent,
-              },
-            }}
-            
-                        eventHandlers = {
-                          new Map([
-                            ['loaded', function () {console.log('Report loaded');}],
-                            ['rendered', function () {console.log('Report rendered');}],
-                            ['error', function (event) {console.log(event.detail);}],
-                            ['visualClicked', () => console.log('visual clicked')],
-                            ['pageChanged', (event) => console.log(event)],
-                          ])
-                        }
-
-                        cssClassName = { "Embed_container" }
-
-                        getEmbeddedComponent = { (embeddedReport) => {
-                          // window.report = embeddedReport;
-                          window.Report = embeddedReport;
-                        }}
-                      />
-        </div>
-        
-          <div className={styles.detailNews}> {/* 예시 뉴스 정보 */}
-            <NewsList data={newsList} />
-          </div>
-        </div>
+    </div>
+    </div>
       
   );
 };
