@@ -4,8 +4,7 @@
     border-radius: 10px;
     background: #FBFBFF;
     /* padding: 10px; */
-    margin-right: 20px;
-    margin-bottom: 5px;
+    margin: 20px 10px;
 }
 
 #title {
@@ -34,14 +33,13 @@
     position: relative;
     text-align: left;
 
-    width: 310px;
+    width: 340px;
     height: 95px;
-    margin-left: 45px;
-    padding-top: 30px;
+    margin-left: 30px;
+    
     padding-right: 45px;
     margin-top: 0px;
     margin-bottom: 0px;
-
 
     color: #000;
     font-family: Pretendard;
@@ -49,6 +47,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+#content_text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .discribe_box {
@@ -61,13 +66,12 @@
     width: 145px;
     height: 30px;
 
-    margin: 0px 20px 0px 200px;
+    margin: 0px 20px 0px auto;
     padding: 0px;
 
     color: #505050;
     text-align: center;
     font-family: Pretendard;
-    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -76,17 +80,15 @@
 #author {
     display: flex;
     flex-direction: row;
-    width: 55px;
     height: 30px;
     justify-content: center;
 
-    margin: 0px 10px 0px 20px;
+    margin: 0px 10px 0px 30px;
     padding: 0px;
 
     color: #60ABFB;
     text-align: center;
     font-family: Pretendard;
-    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
