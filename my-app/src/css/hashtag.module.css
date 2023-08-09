@@ -6,12 +6,11 @@
 .box {
     display: flex;
     flex-direction: row;
-    width: 5vw;
     display: inline-block;
     height: 40px;
     border-radius: 20px;
     padding: 0 16px;
-    margin: 20px;
+    margin-right: 20px;
     background-color: #c8d2ff;
 }
 
