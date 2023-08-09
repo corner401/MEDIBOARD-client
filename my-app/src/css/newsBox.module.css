@@ -33,9 +33,9 @@
     position: relative;
     text-align: left;
 
-    width: 310px;
+    width: 340px;
     height: 95px;
-    margin-left: 45px;
+    margin-left: 30px;
     
     padding-right: 45px;
     margin-top: 0px;
@@ -66,13 +66,12 @@
     width: 145px;
     height: 30px;
 
-    margin: 0px 20px 0px 200px;
+    margin: 0px 20px 0px auto;
     padding: 0px;
 
     color: #505050;
     text-align: center;
     font-family: Pretendard;
-    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -81,17 +80,15 @@
 #author {
     display: flex;
     flex-direction: row;
-    width: 70px;
     height: 30px;
     justify-content: center;
 
-    margin: 0px 10px 0px 20px;
+    margin: 0px 10px 0px 30px;
     padding: 0px;
 
     color: #60ABFB;
     text-align: center;
     font-family: Pretendard;
-    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;

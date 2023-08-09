@@ -70,13 +70,11 @@ const ChartListPage = () => {
                 </div>
 
                 <div>
-                    {" "}
                     {/* 예시 해쉬태그# 검색어 */}
                     {TagList}
                 </div>
 
                 <div>
-                    {" "}
                     {/* powerbi 전체 묶음 */}
                     <ChartList data={chartList} />
                 </div>

@@ -11,7 +11,7 @@ const NewsBox = (props) => {
                 <p id={styles.content_text}>{data.content}</p>
             </div>
             <div className={styles.discribe_box}>
-                <p id={styles.author}>{data.writer}</p>       {/* 날짜 date */}
+                <p id={styles.author}>{data.writer}</p>기자       {/* 날짜 date */}
                 <p id={styles.date}>{data.updateDate.substr(0,10)}</p>           {/* 뉴스 출처 author */}
             </div>
         </div>
