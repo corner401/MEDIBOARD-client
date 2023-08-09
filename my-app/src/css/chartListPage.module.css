@@ -4,7 +4,7 @@
     background-color: #eff2ff;
 }
 
-#menu_titlebar {
+/* #menu_titlebar {
     margin-left: 1vw;
     margin-bottom: 7vh;
     width: 90vw;
@@ -32,7 +32,7 @@
 
 #user_name {
     margin-right: 3vh;
-}
+} */
 
 #search_box {
     max-width: 540px;
