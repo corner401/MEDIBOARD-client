@@ -7,6 +7,13 @@ import HashTag from '../components/HashTag';
 import Menubar from '../components/Menubar';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import TopNav from "../components/TopNav";
+
+
+//* 상단 나브 바 
+const pageIconAddress = "../media/chart_icon_title.jpg";
+const pageTitleText = '통계 자료 데이터 목록';
+
 
 const ChartListPage = () => {
     
@@ -14,10 +21,10 @@ const ChartListPage = () => {
 
     useEffect(() => {
         axios.get("api/stat/list").then((response) => {
-          console.log(response.data);
-          setChartList(response.data);
+            console.log(response.data);
+            setChartList(response.data);
         })
-      },[])
+    },[])
 
     const tagList = [
         "병원위치",
@@ -39,22 +46,10 @@ const ChartListPage = () => {
         <>
             <Menubar />
             <div className={styles.main}>
-                <div id={styles.menu_titlebar}>
-                    <div id={styles.menu_left}>
-                        <img
-                            src={require("../media/chart_icon_title.png")}
-                            alt="main_1"
-                        />
-                        <h2 id={styles.menu_title}>통계 자료 데이터 목록</h2>
-                    </div>
-                    <div id={styles.menu_right}>
-                        <h3 id={styles.user_name}>user name</h3>
-                        <img
-                            src={require("../media/Entrepreneur.png")}
-                            alt="main_1"
-                        />
-                    </div>
-                </div>
+
+                <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+
+            
                 <div id={styles.search_box}>
                     {" "}
                     {/* 검색창 */}

@@ -58,31 +58,12 @@ const RankPage = () => {
             {/* 좌측 나브 바 */}
             <Menubar />
 
-            {/* 상단 나브 바 */}
-            <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
-
             <div className={styles.main}>
                 <div>
                     {" "}
                     {/* 상단 나브 바*/}
-                    <div id={styles.menu_titlebar}>
-                        <div id={styles.menu_left}>
-                            <img
-                                src={require("../media/rank_icon_title.png")}
-                                alt="main_1"  
-                            />
-                            <h2 id={styles.menu_title}>
-                                데이터 활용 차트 순위 목록
-                            </h2>
-                        </div>
-                        <div id={styles.menu_right}>
-                            <h3 id={styles.user_name}>user name</h3>
-                            <img
-                                src={require("../media/Entrepreneur.png")}
-                                alt="main_1"
-                            />
-                        </div>
-                    </div>
+                    <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+
                 </div>
 
                 <div id={styles.chart_body}>

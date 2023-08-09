@@ -11,6 +11,7 @@ import Menubar from '../components/Menubar';
 import { Link } from 'react-router-dom';
 import ChartCard from '../components/ChartCard';
 import NewsList from '../components/NewsList';
+import TopNav from "../components/TopNav";
 
 // import PowerBIEmbed from '../components/PowerBIEmbed'; // PowerBIComponent.js 파일 경로에 맞게 수정
 
@@ -51,22 +52,20 @@ const ChartDetailPage = () => {
                     { newsTitle: newsTitle2, newsContents: newsContents2, newsAuthor: newsAuthor2, newsDate: newsDate2 },
                     { newsTitle : newsTitle3, newsContents : newsContents3, newsAuthor : newsAuthor3, newsDate : newsDate3}]
 
-  
-  
+//  상단 나브 바
+  const pageIconAddress = "../media/dashboard_icon_title.jpg";
+  const pageTitleText = '데이터 활용 차트 순위 목록';
+
   return (
     <div className={styles.detailRootTag}>
-      <Menubar /> {/* <img src="../media/nav.png" alt="좌측 나브 바" />  */}
+      {/* 좌측 나브 바 */}
+      <Menubar /> 
       
       <div>
-        <div className={styles.upperNav}> {/* 상단 나브 바*/}
-          <img src="../media/dashboardpage_nav.png" alt="상단 나브 바" id={styles.upperNavPng}  /> 
-          <div > {/* 대시보드 항목 */}
-            <p id={styles.upperNavInfo} >대시보드 1</p> {/* 기본 대시보드 1 */}
-            <img src="../media/more_dashboard.png" alt="대시보드 추가 버튼" id={styles.upperNavPlus} />
-            <p id={styles.upperNavUserName}>User Name</p> {/* 사용자 닉네임 */}
-            <img src="../media/Entrepreneur.png" alt="유저 직군 이미지" id={styles.upperNavUserPng} /> 
-          </div>
-        </div>
+        {/* 상단 나브 바 */}
+        <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
+         {/* <div > <p id={styles.upperNavInfo} >대시보드 1</p><img src="../media/more_dashboard.png" alt="대시보드 추가 버튼" id={styles.upperNavPlus} /></div>   */}
+      </div>
 
         <div>     {/* 상세 정보 */}
           <div className={styles.detailTag}> {/* 예시 해쉬태그# 검색어 */}
@@ -118,11 +117,8 @@ const ChartDetailPage = () => {
                             },
                             // background: models.BackgroundType.Transparent,
               },
-              
             }}
             
-            
-
                         eventHandlers = {
                           new Map([
                             ['loaded', function () {console.log('Report loaded');}],
@@ -146,8 +142,6 @@ const ChartDetailPage = () => {
             <NewsList data={newsList} />
           </div>
         </div>
-
-      </div>
       
   );
 };
