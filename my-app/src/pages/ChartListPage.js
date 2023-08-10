@@ -63,7 +63,6 @@ const ChartListPage = () => {
             <Menubar />
             <div className={styles.main}>
                 <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
-                <p>keyword - {keyword}</p>
 
                 <div id={styles.search_box}>
                     {" "}
