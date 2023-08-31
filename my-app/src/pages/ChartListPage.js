@@ -68,6 +68,8 @@ const ChartListPage = () => {
         if (!selectedTags.includes(tagValue)) {
             setSelectedTags((prevTags) => [...prevTags, tagValue]);
         }
+
+        console.log("selectedTags :" + selectedTags);
     }
 
     //태그 삭제 함수
