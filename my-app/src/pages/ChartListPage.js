@@ -54,28 +54,72 @@ const ChartListPage = () => {
     const [selectedTags, setSelectedTags] = useState([]);
 
     //hashtag 클릭 핸들러
+    // function handleTagClick(tagValue) {
+    //     console.log("HashTag Clicked: " + tagValue);
+
+    //     //키워드로 api 요청
+    //     axios.get("/api/stat/list?keyword=" + tagValue).then((response) => {
+    //         if (response.data) {
+    //             setChartList(response.data);
+    //         }
+    //     });
+
+    //     // 선택된 태그를 상태에 추가 (이미 존재하는 태그는 추가하지 않음)
+    //     if (!selectedTags.includes(tagValue)) {
+    //         setSelectedTags((prevTags) => [...prevTags, tagValue]);
+    //     }
+
+    //     console.log("selectedTags :" + selectedTags);
+    // }
+
+    // ++ 누적 검색 api 요청
+    //hashtag 클릭 핸들러 (수정)
     function handleTagClick(tagValue) {
         console.log("HashTag Clicked: " + tagValue);
 
-        //키워드로 api 요청
-        axios.get("/api/stat/list?keyword=" + tagValue).then((response) => {
+        // 선택된 태그를 상태에 추가 (이미 존재하는 태그는 추가하지 않음)
+        let updatedTags = selectedTags;
+        if (!selectedTags.includes(tagValue)) {
+            updatedTags = [...selectedTags, tagValue]; // Create a new array that includes the new tagValue
+            setSelectedTags(updatedTags);
+        }
+
+        //selected_box 태그를 하나의 문자열로 연결
+        const tagsAsString = updatedTags.join(","); // Use updatedTags instead of selectedTags
+
+        console.log("HashTag Clicked~: " + tagsAsString);
+
+        //연결된 문자열(키워드)로 api 요청
+        axios.get("/api/stat/list?keyword=" + tagsAsString).then((response) => {
             if (response.data) {
                 setChartList(response.data);
             }
         });
 
-        // 선택된 태그를 상태에 추가 (이미 존재하는 태그는 추가하지 않음)
-        if (!selectedTags.includes(tagValue)) {
-            setSelectedTags((prevTags) => [...prevTags, tagValue]);
-        }
-
-        console.log("selectedTags :" + selectedTags);
+        console.log("요청된 api 키워드 :" + tagsAsString);
     }
 
     //태그 삭제 함수
     function removeTag(tagToRemove) {
         console.log("HashTag UnClicked: " + tagToRemove);
-        setSelectedTags((prevTags) => prevTags.filter((tag) => tag !== tagToRemove));
+
+        //태그를 제거한 후 새로운 배열 생성
+        const AfterCancelTags = selectedTags.filter((tag) => tag !== tagToRemove);
+        setSelectedTags(AfterCancelTags);
+
+        //selected_box 태그를 하나의 문자열로 재연결(삭제 후)
+        const NewTagsAsString = AfterCancelTags.join(",");
+
+        console.log("new TagStrings: " + NewTagsAsString);
+
+        //연결된 문자열(키워드)로 api 요청
+        axios.get("/api/stat/list?keyword=" + NewTagsAsString).then((response) => {
+            if (response.data) {
+                setChartList(response.data);
+            }
+        });
+
+        console.log("삭제 후 요청된 api 키워드 :" + NewTagsAsString);
     }
 
     const tagList = ["의약품", "요양기관", "진료정보", "환자표본", "병원평가", "응급", "의료자원", "지역별", "위치정보", "실시간", "기간별", "약국"];
@@ -107,7 +151,7 @@ const ChartListPage = () => {
 
                 <div id={styles.selected_box}>
                     {/*선택된 해시태그 목록*/}
-                    <p>선택된 hashtag 확인용~</p>
+                    <h3 id={styles.tag_title}>태그 검색</h3>
                     {selectedTags.map((tag) => (
                         <div className={styles.box}>
                             {/* 배경 박스 */}
