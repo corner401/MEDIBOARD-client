@@ -7,6 +7,8 @@ import TopNav from "../components/TopNav";
 import { Link } from "react-router-dom";
 import NewsList from "../components/NewsList"; // NewsList.js 파일 경로에 맞게 수정
 import axios from "axios";
+import DonutChart from '../components/DonutChart';
+
 
 //* 상단 나브 바
 const pageIconAddress = "../media/news_icon_title.jpg";
@@ -80,15 +82,23 @@ const NewsListPage = () => {
                     </button>
                 </div>
 
-                <div className={styles.wordcloud}>
-                    {" "}
-                    {/* 워드 클라우드 */}
-                    <img
-                        id={styles.wordcloud_png}
-                        src="../media/wordcloud_sample.png"
-                        alt="워드 클라우드"
-                    />
+                <div className={styles.introData} >
+                    <div className={styles.wordcloud}>
+                        {" "}
+                        {/* 워드 클라우드 */}
+                        <img
+                            id={styles.wordcloud_png}
+                            src="../media/wordcloud_sample.png"
+                            alt="워드 클라우드"
+                        />
+                    </div>
+
+                    <div className={styles.donutChartContainer}>
+                        <h1 id={styles.chart_title} >도넛 그래프</h1>
+                        <DonutChart />
+                    </div>
                 </div>
+                
 
                 <NewsList data={articleList} />
             </div>

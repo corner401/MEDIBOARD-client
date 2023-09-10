@@ -12,6 +12,9 @@ import NewsListPage from './pages/NewsListPage';
 import RankPage from './pages/RankPage';
 import ChartDetailPage from './pages/ChartDetailPage';
 
+import DonutChart from './pages/DonutChart';
+import TestPages from './pages/TestPages'
+
 function App() {
   return (
     <>
@@ -27,6 +30,8 @@ function App() {
           <Route path="/chart/detail" element={<ChartDetailPage />} />           {/* 통계 데이터 상세 조회 페이지 */}
 
           <Route path="/test" element={<PowerBIConnectTest />} />
+          <Route path="/donutchart " element={<DonutChart />} />     {/* chart.js 도넛 확인 페이지  */}
+          <Route path="/testpages " element={<TestPages />} />     {/* 그냥 확인 페이지  */}
         </Routes>
       </Router>
     </>

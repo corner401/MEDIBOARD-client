@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../css/main.module.css";
 import { useNavigate } from "react-router-dom";
 
+
 const MainPage = () => {
     const navigate = useNavigate();
 
@@ -206,3 +207,4 @@ const MainPage = () => {
 };
 
 export default MainPage;
+

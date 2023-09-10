@@ -144,6 +144,8 @@ const ChartDetailPage = () => {
               <iframe id={styles.iframe} title={statistics.title} width="1000" height="700" src={statistics.src}  frameborder="0" allowFullScreen="true"></iframe>
 
             </div>
+
+            
       
             {/* 뉴스 정보 */}
             <div className={styles.newsContainer}>

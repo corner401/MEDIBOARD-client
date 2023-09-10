@@ -58,9 +58,21 @@
     height: 40px;
 }
 
-#wordcloud_png {
-    width: 550px;
-
+#introData {
     display: flex;
-    margin: auto;
+    height: 600px;
+    justify-content: space-between; /* 요소 사이의 공간을 균등하게 배분합니다. */
+    align-items: center; /* 요소를 수직 중앙에 정렬합니다. */
+}
+
+#wordcloud_png {
+    width: 500px;
+    /* display: flex;
+    margin: auto; */
+}
+
+#donutChartContainer {
+    /* width: 500px; */
+    /* display: flex;
+    margin: auto; */
 }
