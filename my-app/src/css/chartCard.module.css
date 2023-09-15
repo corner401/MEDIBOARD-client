@@ -23,11 +23,12 @@
     font-size: 18px;
     color: black;
     font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .hashtag {
     display: inline-block;
-    
 }
 
 .star_button {
@@ -48,14 +49,18 @@
     width: 400px;
     height: 250px;
     overflow: auto;
-    
+    cursor: pointer;
 }
 #iframe {
-    width: 490px;
-    height: 400px;
-
+    width: 400px;
+    height: 300px;
 }
 #chartContainer::-webkit-scrollbar {
-        display: none;
+    display: none;
 }
 /* 여기까지 iframe 가장자리를 부모 태그로 자르는 꼼수 */
+
+/*iframe 부모(chartContainer 박스*/
+#link_chart {
+    cursor: pointer;
+}
