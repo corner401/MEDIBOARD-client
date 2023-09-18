@@ -7,8 +7,8 @@ import TopNav from "../components/TopNav";
 import { Link } from "react-router-dom";
 import NewsList from "../components/NewsList"; // NewsList.js 파일 경로에 맞게 수정
 import axios from "axios";
-import DonutChart from '../components/DonutChart';
-
+import DonutChart from "../components/DonutChart";
+import Paging from "../components/Paging";
 
 //* 상단 나브 바
 const pageIconAddress = "../media/news_icon_title.jpg";
@@ -58,47 +58,32 @@ const NewsListPage = () => {
                 <div>
                     {" "}
                     {/* 상단 나브 바*/}
-                    <TopNav
-                        pageIcon={pageIconAddress}
-                        pageTitle={pageTitleText}
-                    />
+                    <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
                 </div>
 
                 <div id={styles.search_box}>
                     {" "}
                     {/* 검색창 */}
-                    <input
-                        name="keyword"
-                        onChange={handleChange}
-                        id={styles.search_input}
-                        placeholder="검색어를 입력하세요"
-                    />
+                    <input name="keyword" onChange={handleChange} id={styles.search_input} placeholder="검색어를 입력하세요" />
                     <button id={styles.search_button} onClick={searchWord}>
-                        <img
-                            id={styles.search_icon}
-                            src="../media/search.png"
-                            alt="search 돋보기"
-                        />
+                        <img id={styles.search_icon} src="../media/search.png" alt="search 돋보기" />
                     </button>
                 </div>
 
-                <div className={styles.introData} >
+                <div className={styles.introData}>
                     <div className={styles.wordcloud}>
                         {" "}
                         {/* 워드 클라우드 */}
-                        <img
-                            id={styles.wordcloud_png}
-                            src="../media/wordcloud_sample.png"
-                            alt="워드 클라우드"
-                        />
+                        <img id={styles.wordcloud_png} src="../media/wordcloud_sample.png" alt="워드 클라우드" />
                     </div>
 
                     <div className={styles.donutChartContainer}>
-                        <h1 id={styles.chart_title} >도넛 그래프</h1>
+                        <h1 id={styles.chart_title}>도넛 그래프</h1>
                         <DonutChart />
                     </div>
                 </div>
-                
+
+                <Paging></Paging>
 
                 <NewsList data={articleList} />
             </div>
