@@ -83,8 +83,6 @@ const NewsListPage = () => {
                     </div>
                 </div>
 
-                <Paging></Paging>
-
                 <NewsList data={articleList} />
             </div>
         </div>
