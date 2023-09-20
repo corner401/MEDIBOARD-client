@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../css/main.module.css";
 import { useNavigate } from "react-router-dom";
 
-
 const MainPage = () => {
     const navigate = useNavigate();
 
@@ -174,7 +173,7 @@ const MainPage = () => {
                     </div>
                 </div>
 
-                <img src={require("../media/main_2.png")} alt="icon_2" className={styles.ex_image} />
+                <img src={require("../media/ex_user_1.png")} alt="icon_2" id={styles.ex_image1} />
 
                 <div className={styles.ex_box}>
                     <h2 className={styles.ex_title}>기타 사용자</h2>
@@ -185,6 +184,8 @@ const MainPage = () => {
                     </div>
                 </div>
 
+                <img src={require("../media/ex_user_2.png")} alt="icon_2" id={styles.ex_image2} />
+
                 <div className={styles.ex_box}>
                     <h2 className={styles.ex_title}>의료계 사업가</h2>
                     <div className={styles.ex_text}>
@@ -194,6 +195,8 @@ const MainPage = () => {
                     </div>
                 </div>
 
+                <img src={require("../media/ex_user_3.png")} alt="icon_2" id={styles.ex_image3} />
+
                 <div className={styles.ex_box}>
                     <h2 className={styles.ex_title}>환자</h2>
                     <div className={styles.ex_text}>
@@ -201,10 +204,11 @@ const MainPage = () => {
                         공공보건 데이터는 환자들의 건강 정보 접근을 용이하게 하며 건강한 삶을 유지하는 데에 도움을 줍니다.
                     </div>
                 </div>
+
+                <img src={require("../media/ex_user_4.png")} alt="icon_2" id={styles.ex_image4} />
             </div>
         </div>
     );
 };
 
 export default MainPage;
-
