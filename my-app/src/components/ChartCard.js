@@ -5,50 +5,88 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import styles from "../css/chartCard.module.css";
 
+import { useSelector } from "react-redux";
+
 const ChartCard = (props) => {
     const data = props.data;
     const reportId = data.reportId;
     const embedUrl = data.embedUrl;
     const accessToken = data.accessToken;
+    const userId = useSelector((store) => store.userReducer.userId);
+    const statId = data.id;
 
     //즐겨찾기 이미지 상태 관리를 위한 useState
     const [starState, setStarState] = useState("off"); //초기 상태 - off
 
     // 즐겨찾기 이미지를 토글하는 함수
-    // const toggleStar = () => {
-    //     setStarState((prevState) => (prevState === "off" ? "on" : "off"));
-    //     console.log("star clicked");
-    // };
+    // const apiUrl = "api/star";
+    const requestBody = {
+        userId: userId,
+        statId: statId,
+    };
+
+    console.log("requestBody : ", requestBody);
 
     const toggleStar = async () => {
         if (starState === "off") {
             setStarState("on");
-            const apiUrl = "/api/star";
-            const requestBody = {
-                user_id: "someUserId", // 변경 필요
-                statistics_id: data.id,
-            };
 
             axios
-                .post(apiUrl, requestBody)
+                .post("api/stat/star", requestBody)
                 .then((response) => {
                     console.log("API POST 요청 성공:", response.data);
                 })
-                .catch((error) => {
-                    console.error("API POST 요청 실패:", error);
+                // .catch((error) => {
+                //     console.error("API POST 요청 실패:", error);
+                // });
+                .catch(function (error) {
+                    if (error.response) {
+                        console.log("error.response.data - ", error.response.data);
+                        console.log("error.response.status - ", error.response.status);
+                        console.log("error.response.headers - ", error.response.headers);
+                    } else if (error.request) {
+                        console.log("error.request - ", error.request);
+                    } else {
+                        console.log("Error", error.message);
+                    }
+                    console.log("error config - ", error.config);
                 });
         } else {
             setStarState("off");
-            const deleteUrl = `/api/star/${data.id}`; //url 확인 필요
-
             axios
-                .delete(deleteUrl)
+                .delete("api/stat/star", requestBody)
                 .then((response) => {
-                    console.log("API DELETE 요청 성공:", response.data);
+                    console.log("API DELETE 요청 성공: ", response.data);
                 })
-                .catch((error) => {
-                    console.error("API DELETE 요청 실패:", error);
+                // .catch((error) => {
+                //     console.log("API DELETE 요청 실패: ", error);
+                // });
+                .catch(function (error) {
+                    if (error.response) {
+                        console.log("error.response.data - ", error.response.data);
+                        console.log("error.response.status - ", error.response.status);
+                        console.log("error.response.headers - ", error.response.headers);
+                    } else if (error.request) {
+                        console.log("error.request - ", error.request);
+                    } else {
+                        console.log("Error", error.message);
+                    }
+                    console.log("error config - ", error.config);
                 });
+
+            // axios.delete(requestBody.stat_id);
+            // console.log("Updated requestBody:", requestBody);
+
+            // const deleteUrl = `/api/star/${statId}`; //url 확인 필요
+
+            // axios
+            //     .delete(deleteUrl)
+            //     .then((response) => {
+            //         console.log("API DELETE 요청 성공:", response.data);
+            //     })
+            //     .catch((error) => {
+            //         console.error("API DELETE 요청 실패:", error);
+            //     });
         }
     };
 

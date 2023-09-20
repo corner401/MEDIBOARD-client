@@ -8,9 +8,9 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-//* 상단 나브 바 
+//* 상단 나브 바
 const pageIconAddress = "../media/dashboard_icon_title.jpg";
-const pageTitleText = '커스텀 대시보드';
+const pageTitleText = "커스텀 대시보드";
 
 //* 대시보드 상세 정보
 const DashboardPage = () => {
@@ -18,23 +18,22 @@ const DashboardPage = () => {
     const [pageNum, setPageNum] = useState(1);
     const [chartList, setChartList] = useState([]);
 
-		const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
-
-			if (userId == null) {
-				navigate("/login");
-			}
+        if (userId == null) {
+            navigate("/login");
+        }
 
         const body = {
-            userId: userId
-        }
-        
-        axios.post("api/users/dashboard/"+pageNum, body).then((response) => {
+            userId: userId,
+        };
+
+        axios.post("api/users/dashboard/" + pageNum, body).then((response) => {
             console.log(response.data);
             setChartList(response.data.statList);
-        })
-    },[]);
+        });
+    }, []);
 
     return (
         <>
@@ -44,7 +43,6 @@ const DashboardPage = () => {
                     {" "}
                     {/* 상단 나브 바*/}
                     <TopNav pageIcon={pageIconAddress} pageTitle={pageTitleText} />
-
                 </div>
 
                 <div>
