@@ -71,6 +71,7 @@
 }
 #wordcloud_png {
     width: 500px;
+    height: 400px;
     /* display: flex;
     margin: auto; */
 }
