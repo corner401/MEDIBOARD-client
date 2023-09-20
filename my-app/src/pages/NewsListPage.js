@@ -74,7 +74,7 @@ const NewsListPage = () => {
                     <div className={styles.wordcloud}>
                         {" "}
                         {/* 워드 클라우드 */}
-                        <img id={styles.wordcloud_png} src="../media/wordcloud_sample.png" alt="워드 클라우드" />
+                        <img id={styles.wordcloud_png} src="../media/test2_wordcloud.png" alt="워드 클라우드" />
                     </div>
 
                     <div className={styles.donutChartContainer}>
