@@ -78,8 +78,8 @@ const NewsListPage = () => {
                     </div>
 
                     <div className={styles.donutChartContainer}>
-                        <h1 id={styles.chart_title}>도넛 그래프</h1>
-                        <DonutChart />
+                        {/* <h1 id={styles.chart_title}>도넛 그래프</h1> */}
+                        <DonutChart id={styles.chart} />
                     </div>
                 </div>
 
