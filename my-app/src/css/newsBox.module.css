@@ -1,30 +1,29 @@
 .main_stuff {
     text-decoration: none;
-    width: 400px;
+    width: 360px;
     height: 240px;
     border-radius: 10px;
-    background: #FBFBFF;
+    background: #fbfbff;
     /* padding: 10px; */
     margin: 20px 10px;
 }
 
 #title {
     position: relative;
-    text-align: left;
 
-    width: 335px;
+    width: 330px;
     height: 60px;
 
-    margin-left: 27.5px;
+    /* margin-left: 27.5px; */
+    margin: 0 auto;
     padding-top: 20px;
     margin-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
 
-
     color: #000;
     font-family: Pretendard;
-    font-size: 24px;
+
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -34,11 +33,11 @@
     position: relative;
     text-align: left;
 
-    width: 340px;
+    width: 330px;
     height: 95px;
-    margin-left: 30px;
-    
-    padding-right: 45px;
+    /* margin-left: 30px; */
+    margin: 0 auto;
+    /* padding-right: 45px; */
     margin-top: 0px;
     margin-bottom: 0px;
 
@@ -87,7 +86,7 @@
     margin: 0px 10px 0px 30px;
     padding: 0px;
 
-    color: #60ABFB;
+    color: #60abfb;
     text-align: center;
     font-family: Pretendard;
     font-style: normal;
