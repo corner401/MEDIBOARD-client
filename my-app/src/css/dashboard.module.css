@@ -3,7 +3,6 @@
     padding: 20px;
     margin-left: 80px;
     background-color: #eff2ff;
-    height: 100vh;
 }
 
 #menu_titlebar {
@@ -34,4 +33,72 @@
 
 #user_name {
     margin-right: 3vh;
+}
+
+/* 더미데이터 */
+.cardContainer {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.cardContainer:active {
+    color: black;
+}
+
+.title_container {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hashtag {
+    display: inline-block;
+}
+
+.star_button {
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: 0;
+}
+
+.star_icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* iframe 가장자리를 부모 태그로 자르는 꼼수 */
+#chartContainer {
+    width: 400px;
+    height: 250px;
+    overflow: auto;
+    cursor: pointer;
+}
+#iframe {
+    width: 400px;
+    height: 300px;
+}
+#chartContainer::-webkit-scrollbar {
+    display: none;
+}
+/* 여기까지 iframe 가장자리를 부모 태그로 자르는 꼼수 */
+
+/*iframe 부모(chartContainer 박스*/
+#link_chart {
+    cursor: pointer;
 }
